@@ -54,11 +54,11 @@ def get_team_rating(team_name, ratings_df):
     
     # Fall back to defaults
     if team_name in DEFAULT_RATINGS:
-        print(f"  Using default rating for {team_name}")
+        pass
         return {"team": team_name, **DEFAULT_RATINGS[team_name]}
     
     # Last resort — truly unknown team gets average ratings
-    print(f"  WARNING: No rating found for {team_name}, using average")
+    
     return {
         "team": team_name,
         "attack_rating": 1.0,
